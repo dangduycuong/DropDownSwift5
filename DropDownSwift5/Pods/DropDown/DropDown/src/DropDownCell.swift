@@ -9,14 +9,12 @@
 import UIKit
 
 open class DropDownCell: UITableViewCell {
-		
-	//UI
+    //UI
 	@IBOutlet open weak var optionLabel: UILabel!
-	
-	var selectedBackgroundColor: UIColor?
+    
+    var selectedBackgroundColor: UIColor?
     var highlightTextColor: UIColor?
     var normalTextColor: UIColor?
-
 }
 
 //MARK: - UI
@@ -48,7 +46,6 @@ extension DropDownCell {
 	override open func setSelected(_ selected: Bool, animated: Bool) {
 		let executeSelection: () -> Void = { [weak self] in
 			guard let `self` = self else { return }
-
 			if let selectedBackgroundColor = self.selectedBackgroundColor {
 				if selected {
 					self.backgroundColor = selectedBackgroundColor

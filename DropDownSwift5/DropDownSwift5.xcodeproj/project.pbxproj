@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,12 @@
 		538B385B24133E070023F69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538B385A24133E070023F69D /* Assets.xcassets */; };
 		538B385E24133E070023F69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538B385C24133E070023F69D /* LaunchScreen.storyboard */; };
 		836280B11F60D2E8B390336A /* Pods_DropDownSwift5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC5073B9FD342FFF87CB680 /* Pods_DropDownSwift5.framework */; };
+		CE020475259AC443001EAE7B /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE020474259AC443001EAE7B /* NumbersViewController.swift */; };
+		CE020477259AC463001EAE7B /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE020476259AC463001EAE7B /* Storyboard.swift */; };
+		CE02047B259AC9C5001EAE7B /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE020479259AC9C5001EAE7B /* NumberCell.swift */; };
+		CE02047C259AC9C5001EAE7B /* NumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE02047A259AC9C5001EAE7B /* NumberCell.xib */; };
+		CE3A754D251D80D8009434C7 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A754B251D80D8009434C7 /* CustomCell.swift */; };
+		CE3A754E251D80D8009434C7 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3A754C251D80D8009434C7 /* CustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		538B385D24133E070023F69D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		538B385F24133E070023F69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91CA6CD38AAFAD20F66DCA48 /* Pods-DropDownSwift5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropDownSwift5.release.xcconfig"; path = "Target Support Files/Pods-DropDownSwift5/Pods-DropDownSwift5.release.xcconfig"; sourceTree = "<group>"; };
+		CE020474259AC443001EAE7B /* NumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
+		CE020476259AC463001EAE7B /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		CE020479259AC9C5001EAE7B /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
+		CE02047A259AC9C5001EAE7B /* NumberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberCell.xib; sourceTree = "<group>"; };
+		CE3A754B251D80D8009434C7 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		CE3A754C251D80D8009434C7 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +60,6 @@
 				3760B9F75F3BE42D11C6CECD /* Pods-DropDownSwift5.debug.xcconfig */,
 				91CA6CD38AAFAD20F66DCA48 /* Pods-DropDownSwift5.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,13 +94,43 @@
 			children = (
 				538B385124133E060023F69D /* AppDelegate.swift */,
 				538B385324133E060023F69D /* SceneDelegate.swift */,
+				CE020476259AC463001EAE7B /* Storyboard.swift */,
+				CE3A7549251D80AA009434C7 /* View */,
 				538B385524133E060023F69D /* ViewController.swift */,
+				CE020474259AC443001EAE7B /* NumbersViewController.swift */,
 				538B385724133E060023F69D /* Main.storyboard */,
 				538B385A24133E070023F69D /* Assets.xcassets */,
 				538B385C24133E070023F69D /* LaunchScreen.storyboard */,
 				538B385F24133E070023F69D /* Info.plist */,
 			);
 			path = DropDownSwift5;
+			sourceTree = "<group>";
+		};
+		CE020478259AC9A3001EAE7B /* NumberCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE020479259AC9C5001EAE7B /* NumberCell.swift */,
+				CE02047A259AC9C5001EAE7B /* NumberCell.xib */,
+			);
+			path = NumberCell;
+			sourceTree = "<group>";
+		};
+		CE3A7549251D80AA009434C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE020478259AC9A3001EAE7B /* NumberCell */,
+				CE3A754A251D80B5009434C7 /* CustomCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE3A754A251D80B5009434C7 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE3A754B251D80D8009434C7 /* CustomCell.swift */,
+				CE3A754C251D80D8009434C7 /* CustomCell.xib */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +193,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE02047C259AC9C5001EAE7B /* NumberCell.xib in Resources */,
 				538B385E24133E070023F69D /* LaunchScreen.storyboard in Resources */,
 				538B385B24133E070023F69D /* Assets.xcassets in Resources */,
+				CE3A754E251D80D8009434C7 /* CustomCell.xib in Resources */,
 				538B385924133E060023F69D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,8 +251,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				538B385624133E060023F69D /* ViewController.swift in Sources */,
+				CE020475259AC443001EAE7B /* NumbersViewController.swift in Sources */,
 				538B385224133E060023F69D /* AppDelegate.swift in Sources */,
+				CE3A754D251D80D8009434C7 /* CustomCell.swift in Sources */,
+				CE020477259AC463001EAE7B /* Storyboard.swift in Sources */,
 				538B385424133E060023F69D /* SceneDelegate.swift in Sources */,
+				CE02047B259AC9C5001EAE7B /* NumberCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
